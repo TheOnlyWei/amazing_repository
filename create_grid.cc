@@ -1,6 +1,3 @@
-// Sample test file for the image class.
-// Reads a given pgm image, draws a line, and saves it to
-// another pgm image.
 #include <cstdio>
 #include <iostream>
 #include <string>

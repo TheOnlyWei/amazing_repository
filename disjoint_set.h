@@ -1,3 +1,5 @@
+// Created by Mark Allen Weiss
+// Modified by Wei Shi
 #ifndef DISJ_SETS_H
 #define DISJ_SETS_H
 

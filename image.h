@@ -23,25 +23,8 @@ class Image {
  public:
   Image(): num_rows_{0}, num_columns_{0},
 	   num_gray_levels_{0}, pixels_{nullptr} {}
-    /*
-  Image( unsigned int rows,
-         unsigned int cols,
-         unsigned short gray_level,
-         unsigned short init_gray_level);
-
-  Image( const unsigned long& rows,
-         const unsigned long& cols,
-         const unsigned short& gray_level,
-         const unsigned short& init_gray_level);
-  Image(  unsigned long&& rows,
-          unsigned long&& cols,
-          unsigned short&& gray_level,
-          unsigned short&& init_gray_level);
-*/
-  explicit Image(const Image &an_image);
-  explicit Image(Image &&an_image);
-
-  //Image& operator=(const Image &an_image) = delete;
+  Image(const Image &an_image);
+  Image(Image &&an_image);
 
   ~Image();
   Image& operator=(const Image& rhs);

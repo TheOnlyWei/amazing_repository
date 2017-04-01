@@ -1,5 +1,6 @@
 ## ACYCLIC MAZE GENERATOR AND SOLVER
 by **Wei Shi**
+
 This program was built using Linux and BASH.
 
 #### INSTALL MAKE

@@ -1,3 +1,5 @@
+// Created by Mark Allen Weiss
+// Modified by Wei Shi
 #include <iostream>
 #include "disjoint_set.h"
 using namespace std;

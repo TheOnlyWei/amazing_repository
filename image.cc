@@ -1,4 +1,5 @@
-
+// Created by Ioannis Stamos
+// Modified by Wei Shi
 #include <iostream>
 #include <string>
 #include <string.h>
@@ -27,52 +28,6 @@ Image::Image(Image &&an_image) {
     }
 }
 
-/*
-Image::Image( unsigned int rows,
-              unsigned int cols,
-              unsigned short gray_level,
-              unsigned short init_gray_level) {
-
-  AllocateSpaceAndSetSize(rows, cols);
-  SetNumberGrayLevels(gray_level);
-
-  for (size_t i = 0; i < num_rows(); ++i) {
-    for (size_t j = 0; j < num_columns(); ++j){
-      SetPixel(i,j,init_gray_level);
-    }
-  }
-}
-
-Image::Image( const unsigned long& rows,
-              const unsigned long& cols,
-              const unsigned short& gray_level,
-              const unsigned short& init_gray_level) {
-
-  AllocateSpaceAndSetSize(rows, cols);
-  SetNumberGrayLevels(gray_level);
-
-  for (size_t i = 0; i < num_rows(); ++i) {
-   for (size_t j = 0; j < num_columns(); ++j){
-     SetPixel(i,j,init_gray_level);
-   }
-  }
-
-}
-Image::Image( unsigned long&& rows,
-              unsigned long&& cols,
-              unsigned short&& gray_level,
-              unsigned short&& init_gray_level) {
-
-  AllocateSpaceAndSetSize(std::move(rows), std::move(cols));
-  SetNumberGrayLevels(std::move(gray_level));
-
-  for (size_t i = 0; i < num_rows(); ++i) {
-   for (size_t j = 0; j < num_columns(); ++j){
-     SetPixel(i,j,std::move(init_gray_level));
-   }
-  }
-
-}*/
 Image::~Image(){
   DeallocateSpace();
 }
