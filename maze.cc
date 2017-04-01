@@ -95,8 +95,9 @@ Image* Maze::get_image(const size_t& scale) {
   return maze;
 }
 
-Image* Maze::get_solved_image(size_t start_row, size_t start_col,
-                              size_t end_row,size_t end_col, size_t scale) {
+Image* Maze::get_solved_image(const size_t& start_row, const size_t& start_col,
+                              const size_t& end_row, const size_t& end_col,
+                              const size_t& scale){
 
     size_t start_index = (num_columns_*start_row) + start_col;
     size_t end_index = (num_columns_*end_row) + end_col;
@@ -114,7 +115,8 @@ Image* Maze::get_solved_image(size_t start_row, size_t start_col,
     return solved_maze;
 }
 
-Image* Maze::get_solved_image(size_t start, size_t end, size_t scale) {
+Image* Maze::get_solved_image(const size_t& start, const size_t& end,
+                              const size_t& scale) {
   if(end > cells_.size()) {
     cout << "ERROR: Maze end point out of bounds." << endl;
     return nullptr;
@@ -156,7 +158,8 @@ Image* Maze::get_solved_image(size_t start, size_t end, size_t scale) {
   return solved_maze;
 }
 
-Image* Maze::get_grid(size_t rows, size_t columns, size_t scale) {
+Image* Maze::get_grid(const size_t& rows, const size_t& columns,
+                      const size_t& scale) {
   Image* maze = new Image();
   size_t unit_row_size = (2*num_rows_)+1;
   size_t unit_col_size = (2*num_columns_)+1;
@@ -173,7 +176,7 @@ Image* Maze::get_grid(size_t rows, size_t columns, size_t scale) {
   return maze;
 }
 
-forward_list<size_t> Maze::Solve(size_t start, size_t end) const {
+forward_list<size_t> Maze::Solve(const size_t& start, const size_t& end) const {
   forward_list<size_t> result;
   unordered_map<size_t, size_t> cell_to_previous;
   unordered_map<size_t, bool> visited;
@@ -239,11 +242,12 @@ size_t Maze::GetNeighborIndex(const size_t& current, const unsigned int& wall) {
   return neighbor_cell_index;
 }
 
-bool Maze::IsInSameSet(size_t current, size_t neighbor) {
+bool Maze::IsInSameSet(const size_t& current, const size_t& neighbor) {
   return ( set_.Find(current) == set_.Find(neighbor) );
 }
 
-void Maze::BreakWall(size_t cell_index, size_t neighbor, unsigned int wall) {
+void Maze::BreakWall( const size_t& cell_index, const size_t& neighbor,
+                      const unsigned int& wall) {
   cells_[cell_index].Break(wall);
   set_.UnionSets(set_.Find(cell_index), set_.Find(neighbor));
 }
@@ -286,11 +290,11 @@ void Maze::SetScaledPixel(const size_t& i, const size_t& j, const size_t& scale,
   }
 }
 
-void Maze::BreakWallImage(  unsigned int wall, // which side of the cell's wall to break
-                            size_t i, // cell row index
-                            size_t j, // cell column index
+void Maze::BreakWallImage(  const unsigned int& wall, // which side of the cell's wall to break
+                            const size_t& i, // cell row index
+                            const size_t& j, // cell column index
                             Image* maze,
-                            size_t scale) {
+                            const size_t& scale) {
   size_t image_unit_row = (2*i) + 1; // unit row start at 1 due to boundary padding
   size_t image_unit_col = (2*j) + 1; // unit col start at 1 due to boundary padding
 

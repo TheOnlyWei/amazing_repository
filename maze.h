@@ -84,31 +84,31 @@ class Maze {
     // @param scale in pixels of size of each cell.
     // @return scaled .pgm grayscale image of the maze.
     Image* get_image(const size_t& scale = 15);
-    Image* get_solved_image(size_t start_row, size_t start_col,
-                            size_t end_row,size_t end_col, size_t scale);
-    Image* get_solved_image(size_t start, size_t end, size_t scale);
-    Image* get_grid(size_t rows, size_t columns, size_t scale);
+    Image* get_solved_image(const size_t& start_row, const size_t& start_col,
+                            const size_t& end_row, const size_t& end_col,
+                            const size_t& scale);
+    Image* get_solved_image(const size_t& start, const size_t& end,
+                            const size_t& scale);
+    Image* get_grid(const size_t& rows, const size_t& columns,
+                    const size_t& scale);
     // Breadth first search solution to maze.
     // size_t template parameter is the index of the cell in cells_ vector.
     // @param start is the index of starting cell in cells_ vector.
     // @param end is the index of ending cell in cells_ vector.
     // @return an ordered list of indices to follow to reach from start to end
     // in the maze.
-    forward_list<size_t> Solve(size_t start, size_t end) const;
+    forward_list<size_t> Solve(const size_t& start, const size_t& end) const;
 
   private:
     // @param current is the current cell's index.
     // @param wall is the wall index [0,1] = [right, bottom]
     // @return index of neighboring cell separated by the wall
     size_t GetNeighborIndex(const size_t& current, const unsigned int& wall);
-    // @param i is the current cell index.
-    // @param wall is the wall index [0,1] = [right, bottom]
-    void UnionCells(size_t i, unsigned int wall);
-    void BreakWall(size_t cell_index, size_t neighbor, unsigned int wall);
+    void BreakWall( const size_t& cell_index, const size_t& neighbor,
+                    const unsigned int& wall);
     // @param random_indices are randomized indices from indices of walls_.
     void BreakWalls(const vector<size_t>& random_indices);
     void InitializeWalls();
-    void InitializeGraph();
     // @param (i,j) are the scaled indices of the scaled image.
     // @param scale is the scale.
     // sets the value of a scale*scale pixel area to white starting at (i,j).
@@ -119,15 +119,15 @@ class Maze {
     // @param (i,j) is the current cell's index
     // @param maze is the image of the maze to mutate.
     // @param scale is the length in pixels of a square cell.
-    void BreakWallImage(  unsigned int wall, // which side of the cell to break
-                          size_t i, // cell row index
-                          size_t j, // cell column index
+    void BreakWallImage(  const unsigned int& wall, // which side of the cell to break
+                          const size_t& i, // cell row index
+                          const size_t& j, // cell column index
                           Image* maze,
-                          size_t scale);
+                          const size_t& scale);
     // @param current is the current cell index.
     // @param is a neigboring cell index.
     // @return true if current and neighbor are in same set.
-    bool IsInSameSet(size_t current, size_t neighbor);
+    bool IsInSameSet(const size_t& current, const size_t& neighbor);
 
     DisjSets set_; // one dimensional set for storing "connectedness" of cells
     vector<Cell> cells_; // one dimensional representation of a maze.

@@ -25,8 +25,8 @@ class Image {
  public:
   Image(): num_rows_{0}, num_columns_{0},
 	   num_gray_levels_{0}, pixels_{nullptr} {}
-  Image(const Image &an_image);
-  Image(Image &&an_image);
+  explicit Image(const Image &an_image);
+  explicit Image(Image &&an_image);
 
   ~Image();
   Image& operator=(const Image& rhs);
