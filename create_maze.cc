@@ -1,8 +1,5 @@
 #include "maze.h"
 
-using namespace std;
-using namespace image;
-
 int main(int argc, char **argv){
   if (argc == 10) {
     GenerateMaze( argv[1],argv[2],argv[3],

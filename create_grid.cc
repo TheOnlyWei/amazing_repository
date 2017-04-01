@@ -1,10 +1,6 @@
 #include "maze.h"
 
-using namespace std;
-using namespace image;
-
 int main(int argc, char **argv){
-
   if (argc == 5) {
     GenerateGrid(argv[1],argv[2],argv[3],argv[4]);
   } else if (argc == 1) {

@@ -66,7 +66,7 @@ For example:
 $./create_maze 10 20 30 unsolved.pgm
 ```
 creates a maze where every cell is 10*10 pixels with 20 rows and 30 columns
-of cells. The unsolved maze is then written to a file named unsolved.pgm.
+of cells. The unsolved maze is then written to a file named "unsolved.pgm".
 
 **OPTION 2**: Create an unsolved maze and its solved image
 ```{r, engine='bash', count_lines}
@@ -83,11 +83,11 @@ $./create_maze <1> <2> <3> <4> <5> <6> <7> <8> <9>
       <9>:  string solved maze output file name (.pgm grayscale image).
 For Example:
 ```{r, engine='bash', count_lines}
-$./create_maze 20 10 30 unsolved.pgm 5 10 15 20 solved.pgm
+$./create_maze 15 20 30 unsolved.pgm 5 10 15 20 solved.pgm
 ```
-  creates an image of a maze where every cell is 20*20 pixels, with a total
-  of 10 rows of cells and 30 columns of cells. Then it creates an unsolved
-  maze image named "unsolved.pgm" and a solved maze image named solved.pgm,
+  creates an image of a maze where every cell is 15*15 pixels, with a total
+  of 20 rows of cells and 30 columns of cells. Then it creates an unsolved
+  maze image named "unsolved.pgm" and a solved maze image named "solved.pgm",
   with a path marked from (5,10) to (15,20).
 
 #### UNDERSTANDING THE MAZE IMAGE
