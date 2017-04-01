@@ -1,7 +1,3 @@
-#include <cstdio>
-#include <iostream>
-#include <string>
-#include <forward_list>
 #include "maze.h"
 
 using namespace std;
