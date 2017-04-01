@@ -14,8 +14,8 @@ int main(int argc, char **argv){
   } else if (argc == 1) {
     GenerateGrid();
   } else {
-      printf("ERROR: invalid arguments, please refer to README.txt.\n");
-      return 0;
+    printf("ERROR: invalid arguments, please refer to README.txt.\n");
   }
+  return 0;
 
 }
