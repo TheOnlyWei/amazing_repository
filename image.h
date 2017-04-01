@@ -1,3 +1,5 @@
+// Created by Ioannis Stamos
+// Modified by Wei Shi
 #ifndef COMPUTER_VISION_IMAGE_H_
 #define COMPUTER_VISION_IMAGE_H_
 

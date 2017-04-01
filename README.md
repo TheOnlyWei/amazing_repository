@@ -11,12 +11,17 @@ $sudo apt-get install build-essential
 #### COMPILE PROGRAM
 1.  Go (cd ...) into the project root directory
 2.  Run make commands to make all programs:
-      $make all
-      If you only want main maze program:
-        $make create_maze
-      If you also want to see how the cells are arranged in the image:
-        $make create_grid
-
+```{r, engine='bash', count_lines}
+$make all
+```
+If you only want main maze program:
+```{r, engine='bash', count_lines}
+$make create_maze
+```
+If you also want to see how the cells are arranged in the image:
+```{r, engine='bash', count_lines}
+$make create_grid
+```
 **WARNING**: Don't make any of the dimensions too large or it will take forever
   to generate the maze. A 15\*15 pixeled cell maze with 50 cell rows and 50 cell
   columns takes up about 2.3 megabytes and has resolution 1515\*1515 pixels.
