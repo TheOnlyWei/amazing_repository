@@ -92,7 +92,7 @@ $./create_maze 20 10 30 unsolved.pgm 5 10 15 20 solved.pgm
 
 #### UNDERSTANDING THE MAZE IMAGE
 - In the solved maze image, the starting point is the second darkest cell with
-  gray value 90, and the ending point is the second darkest cell in the image at
+  gray value 90, and the ending point is the darkest cell in the image at
   gray value 0.
 
 - The maze image generated has a default starting cell at the top left or bottom
