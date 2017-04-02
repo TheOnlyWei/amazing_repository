@@ -28,23 +28,24 @@ $make create_grid
 
 #### CREATE GRID
   The grid is to show how the cells are arranged. The cells are indexed by the
-  white squares, not including the spaces between them, which are considered walls
-  even when they are knocked down to form the maze.
+  white squares, not including the spaces between them, which are considered
+  walls even when they are knocked down to form the maze.
 
 ##### WITHOUT ARGUMENTS
 ```{r, engine='bash', count_lines}
 $./create_grid
 ```
-You will be prompt by the CLI to enter information to generate the grid.
+You will be prompt by the CLI to enter information to generate the grid. The
+program asks for row index first then followed by column index.
 
 ##### WITH ARGUMENTS
 ```{r, engine='bash', count_lines}
 $./create_grid <1> <2> <3> <4>
 ```
-    <1>:  the pixel scale or length of a square cell. Default length is 15.
-    <2>:  number of rows of cells not including walls.
-    <3>:  number of columns of cells not including walls.
-    <4>:  grid output file name (.pgm grayscale image).
+    <1>:  unsigned integer pixel scale or length of a square cell.
+    <2>:  unsigned integer number of rows of cells not including walls.
+    <3>:  unsigned integer number of columns of cells not including walls.
+    <4>:  string grid output file name (.pgm grayscale image).
 
 #### CREATE MAZE
 ##### WITHOUT ARGUMENTS (has error check loop)
@@ -57,10 +58,10 @@ You will be prompt by the CLI to enter information to generate the maze.
 ```{r, engine='bash', count_lines}
 $./create_maze <1> <2> <3> <4> <5>
 ```
-      <1>:  the pixel scale or length of a square cell. Default length is 15.
-      <2>:  number of rows of cells not including walls.
-      <3>:  number of columns of cells not including walls.
-      <4>:  unsolved maze output file name (.pgm grayscale image).
+      <1>:  unsigned integer pixel scale or length of a square cell.
+      <2>:  unsigned integer number of rows of cells not including walls.
+      <3>:  unsigned integer number of columns of cells not including walls.
+      <4>:  string unsolved maze output file name (.pgm grayscale image).
 For example:
 ```{r, engine='bash', count_lines}
 $./create_maze 10 20 30 unsolved.pgm
@@ -72,7 +73,7 @@ of cells. The unsolved maze is then written to a file named "unsolved.pgm".
 ```{r, engine='bash', count_lines}
 $./create_maze <1> <2> <3> <4> <5> <6> <7> <8> <9>
 ```
-      <1>:  the pixel scale or length of a square cell. Default length is 15.
+      <1>:  unsigned integer pixel scale or length of a square cell.
       <2>:  unsigned integer total number of rows of cells not including walls.
       <3>:  unsigned integer total number of columns of cells not including walls.
       <4>:  string unsolved maze output file name (.pgm grayscale image).

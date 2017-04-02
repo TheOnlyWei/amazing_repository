@@ -427,36 +427,41 @@ void GenerateMaze() {
   string end_col_string;
   string solved_output;
 
+  cout << endl;
+  printf("For default start point and end point, enter for (row, column) pair:\n");
+  printf("start index (0,0) and end index (%zu,%zu).\n", rows-1, columns-1);
+  printf("Or enter a pair of points anywhere in between for a different path.\n");
+  cout << endl;
   cout << "Enter the start row index: ";
   cin >> start_row_string;
   while(!IsUnsignedNumber(start_row_string)
         || StringToSizeT(start_row_string) >= rows) {
-    cout << "ERROR: Index must be an unsigned integer within bounds of maze." << endl;
-    cout << "Enter again: ";
+    cout << "ERROR: index must be an unsigned integer within bounds of maze." << endl;
+    cout << "Enter starting row again: ";
     cin >> start_row_string;
   }
   cout << "Enter the start column index: ";
   cin >> start_col_string;
   while(!IsUnsignedNumber(start_col_string)
         || StringToSizeT(start_col_string) >= columns) {
-    cout << "ERROR: Index must be an unsigned integer within bounds of maze." << endl;
-    cout << "Enter again: ";
+    cout << "ERROR: index must be an unsigned integer within bounds of maze." << endl;
+    cout << "Enter starting column again: ";
     cin >> start_col_string;
   }
   cout << "Enter the end row index: ";
   cin >> end_row_string;
   while(!IsUnsignedNumber(end_row_string)
         || StringToSizeT(end_row_string) >= rows) {
-    cout << "ERROR: Index must be an unsigned integer within bounds of maze." << endl;
-    cout << "Enter again: ";
+    cout << "ERROR: index must be an unsigned integer within bounds of maze." << endl;
+    cout << "Enter ending row again: ";
     cin >> end_row_string;
   }
   cout << "Enter the end column index: ";
   cin >> end_col_string;
   while(!IsUnsignedNumber(end_col_string)
         || StringToSizeT(end_col_string) >= columns) {
-    cout << "ERROR: Index must be an unsigned integer within bounds of maze." << endl;
-    cout << "Enter again: ";
+    cout << "ERROR: index must be an unsigned integer within bounds of maze." << endl;
+    cout << "Enter ending column again: ";
     cin >> end_col_string;
   }
   cout << "Enter the solved maze output: ";

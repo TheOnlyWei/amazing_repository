@@ -63,7 +63,8 @@ class Cell {
 *   4. Remove that wall from the pool and repeat from 2 to 4 until all cells
 *      are in the same set.
 *
-*   Entry point for maze generation is non-class method GenerateMaze().
+*   Entry point for maze generation is non-class method GenerateMaze(...) at the
+*   bottom of this file.
 */
 class Maze {
   public:
@@ -83,7 +84,7 @@ class Maze {
 
     // @param scale in pixels of size of each cell.
     // @return scaled .pgm grayscale image of the maze.
-    Image* get_image(const size_t& scale = 15);
+    Image* get_image(const size_t& scale = 10);
     Image* get_solved_image(const size_t& start_row, const size_t& start_col,
                             const size_t& end_row, const size_t& end_col,
                             const size_t& scale);
