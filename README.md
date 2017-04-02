@@ -26,7 +26,7 @@ $make create_grid
   to generate the maze. A 15\*15 pixeled cell maze with 50 cell rows and 50 cell
   columns takes up about 2.3 megabytes and has resolution 1515\*1515 pixels.
 
-#### CREATE GRID
+## CREATE GRID
   The grid is to show how the cells are arranged. The cells are indexed by the
   white squares, not including the spaces between them, which are considered
   walls even when they are knocked down to form the maze.
@@ -47,7 +47,7 @@ $./create_grid <1> <2> <3> <4>
     <3>:  unsigned integer number of columns of cells not including walls.
     <4>:  string grid output file name (.pgm grayscale image).
 
-#### CREATE MAZE
+## CREATE MAZE
 ##### WITHOUT ARGUMENTS (has error check loop)
 ```{r, engine='bash', count_lines}
 $./create_maze
@@ -91,7 +91,7 @@ $./create_maze 15 20 30 unsolved.pgm 5 10 15 20 solved.pgm
   maze image named "unsolved.pgm" and a solved maze image named "solved.pgm",
   with a path marked from (5,10) to (15,20).
 
-#### UNDERSTANDING THE MAZE IMAGE
+## UNDERSTANDING THE MAZE IMAGE
 - In the solved maze image, the starting point is the second darkest cell with
   gray value 90, and the ending point is the darkest cell in the image at
   gray value 0.

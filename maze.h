@@ -75,8 +75,8 @@ class Maze {
     explicit Maze(size_t&& rows, size_t&& cols);
     Maze& operator=(const Maze& rhs);
 
-    // Randomly generates the maze and stores it in cells_.
-    // Generates randomized walls from cells_ and stores in in walls_.
+    // Generates randomixed maze and stores it in cells_.
+    // Generates randomized walls from cells_ and stores it in walls_.
     void Generate();
     void PrintCells() const;
     void PrintWalls() const;
