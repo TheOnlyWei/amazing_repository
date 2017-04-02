@@ -31,14 +31,14 @@ $make create_grid
   white squares, not including the spaces between them, which are considered
   walls even when they are knocked down to form the maze.
 
-##### WITHOUT ARGUMENTS
+#### WITHOUT ARGUMENTS
 ```{r, engine='bash', count_lines}
 $./create_grid
 ```
 You will be prompt by the CLI to enter information to generate the grid. The
 program asks for row index first then followed by column index.
 
-##### WITH ARGUMENTS
+#### WITH ARGUMENTS
 ```{r, engine='bash', count_lines}
 $./create_grid <1> <2> <3> <4>
 ```
@@ -48,12 +48,12 @@ $./create_grid <1> <2> <3> <4>
     <4>:  string grid output file name (.pgm grayscale image).
 
 ## CREATE MAZE
-##### WITHOUT ARGUMENTS (has error check loop)
+#### WITHOUT ARGUMENTS (has error check loop)
 ```{r, engine='bash', count_lines}
 $./create_maze
 ```
 You will be prompt by the CLI to enter information to generate the maze.
-##### WITH ARGUMENTS (graceful exit on error)
+#### WITH ARGUMENTS (graceful exit on error)
 **OPTION 1**: Create an unsolved maze
 ```{r, engine='bash', count_lines}
 $./create_maze <1> <2> <3> <4> <5>
