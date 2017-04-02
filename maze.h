@@ -85,11 +85,23 @@ class Maze {
     // @param scale in pixels of size of each cell.
     // @return scaled .pgm grayscale image of the maze.
     Image* get_image(const size_t& scale = 10);
+    // @param (start_row, start_col) two dimensional starting index.
+    // @param (end_row, end_col) two dimensional ending index.
+    // @param scale square cell dimension in pixels.
+    // @return .pgm file of solved maze.
     Image* get_solved_image(const size_t& start_row, const size_t& start_col,
                             const size_t& end_row, const size_t& end_col,
                             const size_t& scale);
+    // @param start one dimensional starting index.
+    // @param end one dimensional ending index.
+    // @param scale square cell dimension in pixels.
+    // @return .pgm file of solved maze.
     Image* get_solved_image(const size_t& start, const size_t& end,
                             const size_t& scale);
+    // @param rows is the number of rows of cells.
+    // @param columns is the number of columns of cells.
+    // @param scale square cell dimension in pixels.
+    // @return .pgm file of cell layout and how they are indexed.
     Image* get_grid(const size_t& rows, const size_t& columns,
                     const size_t& scale);
     // Breadth first search solution to maze.
