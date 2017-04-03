@@ -69,8 +69,8 @@ class Cell {
 class Maze {
   public:
     Maze() {}
-    // @param rows determine the number of cells for the width of the maze.
-    // @param cols determing the number of cells for the height of the maze.
+    // @param rows determine the number of cells for the height of the maze.
+    // @param cols determing the number of cells for the width of the maze.
     explicit Maze(const size_t& rows, const size_t& cols);
     explicit Maze(size_t&& rows, size_t&& cols);
     Maze& operator=(const Maze& rhs);
