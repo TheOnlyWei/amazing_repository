@@ -12,15 +12,6 @@ using namespace std;
 
 namespace image{
 
-/**
-* Maze
-* The maze data structure is simply a 2D array for a .pgm image file.
-* The data structure does not store the data for walls of the maze.
-* Instead the walls are generated when the .pgm image is generated.
-* The boundaries between each pixel are walls
-* This is visualized by generating a new image with black borders
-* separating each of the pixels.
-*/
 class Image {
  public:
   Image(): num_rows_{0}, num_columns_{0},
