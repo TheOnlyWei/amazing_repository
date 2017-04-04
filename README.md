@@ -56,7 +56,7 @@ You will be prompt by the CLI to enter information to generate the maze.
 #### WITH ARGUMENTS (graceful exit on error)
 **OPTION 1**: Create an unsolved maze
 ```{r, engine='bash', count_lines}
-$./create_maze <1> <2> <3> <4> <5>
+$./create_maze <1> <2> <3> <4>
 ```
       <1>:  unsigned integer pixel scale or length of a square cell.
       <2>:  unsigned integer number of rows of cells not including walls.

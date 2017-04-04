@@ -31,7 +31,7 @@ CREATE GRID
 
   WITH ARGUMENTS
   $./create_grid <1> <2> <3> <4>
-    <1>:  the pixel scale or length of a square cell. Default length is 15.
+    <1>:  the pixel scale or length of a square cell.
     <2>:  number of rows of cells not including walls.
     <3>:  number of columns of cells not including walls.
     <4>:  grid output file name (.pgm grayscale image).
@@ -43,8 +43,8 @@ CREATE MAZE
 
   WITH ARGUMENTS (graceful exit on error)
   Create an unsolved maze
-    $./create_maze <1> <2> <3> <4> <5>
-      <1>:  the pixel scale or length of a square cell. Default length is 15.
+    $./create_maze <1> <2> <3> <4>
+      <1>:  the pixel scale or length of a square cell.
       <2>:  number of rows of cells not including walls.
       <3>:  number of columns of cells not including walls.
       <4>:  unsolved maze output file name (.pgm grayscale image).
@@ -55,7 +55,7 @@ CREATE MAZE
 
   Create an unsolved maze and its solved image
     $./create_maze <1> <2> <3> <4> <5> <6> <7> <8> <9>
-      <1>:  the pixel scale or length of a square cell. Default length is 15.
+      <1>:  the pixel scale or length of a square cell.
       <2>:  unsigned integer total number of rows of cells not including walls.
       <3>:  unsigned integer total number of columns of cells not including walls.
       <4>:  string unsolved maze output file name (.pgm grayscale image).
