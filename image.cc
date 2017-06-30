@@ -1,10 +1,7 @@
 // Created by Ioannis Stamos
 // Modified by Wei Shi
 #include <iostream>
-#include <string>
 #include <string.h>
-#include <cstdio>
-#include <cstdlib>
 #include "image.h"
 
 using namespace std;

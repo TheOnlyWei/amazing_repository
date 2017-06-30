@@ -3,12 +3,7 @@
 #ifndef COMPUTER_VISION_IMAGE_H_
 #define COMPUTER_VISION_IMAGE_H_
 
-#include <cstdlib>
 #include <string>
-#include <random>
-
-#include <iostream>
-using namespace std;
 
 namespace image{
 
