@@ -3,12 +3,8 @@
 #ifndef MAZE_H
 #define MAZE_H
 
-#include <vector>
 #include <forward_list>
-#include <queue>
-#include <unordered_map>
-#include <utility>
-#include <random>
+#include <vector>
 #include "image.h"
 #include "disjoint_set.h"
 #include "utility_methods.h"

@@ -1,5 +1,8 @@
 #include <iostream>
 #include <set>
+#include <unordered_map>
+#include <queue>
+
 #include "maze.h"
 using namespace std;
 
@@ -180,7 +183,6 @@ Image* Maze::get_grid(const size_t& rows, const size_t& columns,
 forward_list<size_t> Maze::Solve(const size_t& start, const size_t& end) const {
   forward_list<size_t> result;
   unordered_map<size_t, size_t> cell_to_previous;
-  //unordered_map<size_t, bool> visited;
   set<size_t> visited;
 
   cell_to_previous[start] = start;
@@ -191,7 +193,6 @@ forward_list<size_t> Maze::Solve(const size_t& start, const size_t& end) const {
 
   while(!cells_to_visit.empty()) {
     current_cell = cells_to_visit.front();
-    //visited[current_cell] = true;
     visited.insert(current_cell);
     cells_to_visit.pop();
 
