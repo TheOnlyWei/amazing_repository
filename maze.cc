@@ -1,4 +1,5 @@
 #include <iostream>
+#include <set>
 #include "maze.h"
 using namespace std;
 
@@ -179,7 +180,8 @@ Image* Maze::get_grid(const size_t& rows, const size_t& columns,
 forward_list<size_t> Maze::Solve(const size_t& start, const size_t& end) const {
   forward_list<size_t> result;
   unordered_map<size_t, size_t> cell_to_previous;
-  unordered_map<size_t, bool> visited;
+  //unordered_map<size_t, bool> visited;
+  set<size_t> visited;
 
   cell_to_previous[start] = start;
   queue<size_t> cells_to_visit;
@@ -189,7 +191,8 @@ forward_list<size_t> Maze::Solve(const size_t& start, const size_t& end) const {
 
   while(!cells_to_visit.empty()) {
     current_cell = cells_to_visit.front();
-    visited[current_cell] = true;
+    //visited[current_cell] = true;
+    visited.insert(current_cell);
     cells_to_visit.pop();
 
     if(current_cell == end) {
@@ -205,22 +208,22 @@ forward_list<size_t> Maze::Solve(const size_t& start, const size_t& end) const {
     top_cell = current_cell-num_columns_;
 
     // check if current cell is connected to the cell to its left.
-    if(!visited[left_cell] && (current_cell % num_columns_) != 0 && !cells_[left_cell].HasRightWall()) {
+    if(visited.find(left_cell) == visited.end() && (current_cell % num_columns_) != 0 && !cells_[left_cell].HasRightWall()) {
       cells_to_visit.push(left_cell);
       cell_to_previous[left_cell] = current_cell;
     }
     // check if current cell is connected to the cell to its top.
-    if(!visited[top_cell] && (current_cell / num_columns_) != 0 && !cells_[top_cell].HasBottomWall()) {
+    if(visited.find(top_cell) == visited.end() && (current_cell / num_columns_) != 0 && !cells_[top_cell].HasBottomWall()) {
       cells_to_visit.push(top_cell);
       cell_to_previous[top_cell] = current_cell;
     }
     // check if current cell is connected to the cell to its right.
-    if(!visited[current_cell+1] && !cells_[current_cell].HasRightWall()){
+    if(visited.find(current_cell+1) == visited.end() && !cells_[current_cell].HasRightWall()){
       cells_to_visit.push(current_cell+1);
       cell_to_previous[current_cell+1] = current_cell;
     }
     // check if current cell is connected to the cell to its bottom.
-    if(!visited[current_cell+num_columns_] && !cells_[current_cell].HasBottomWall()){
+    if(visited.find(current_cell+num_columns_) == visited.end() && !cells_[current_cell].HasBottomWall()){
       cells_to_visit.push(current_cell+num_columns_);
       cell_to_previous[current_cell+num_columns_] = current_cell;
     }
